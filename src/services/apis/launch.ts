@@ -1,8 +1,8 @@
-import { useQuery, UseQueryOptions } from "react-query";
-import { endpoints, endpointKeys } from "constants/endpoints";
-import { apiClient } from "../apiClient";
-import { AxiosError } from "axios";
-import { LaunchResponseType } from "types/Launch";
+import { useQuery, UseQueryOptions } from 'react-query';
+import { endpoints, endpointKeys } from 'constants/endpoints';
+import { apiClient } from '../apiClient';
+import { AxiosError } from 'axios';
+import { LaunchResponseType } from 'types/Launch';
 
 const useGetLaunchInfo = (
   options?: UseQueryOptions<LaunchResponseType, AxiosError, LaunchResponseType>

@@ -1,5 +1,5 @@
-import { LatLngExpression } from "leaflet";
-import { ReactElement } from "react";
+import { LatLngExpression } from 'leaflet';
+import { ReactElement } from 'react';
 
 type MapItems = Array<{
   position: LatLngExpression;

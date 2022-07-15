@@ -3,7 +3,6 @@ import { Marker, Popup, TileLayer, MapContainer } from 'react-leaflet';
 import styled from 'styled-components';
 import { MapItems } from 'types/Map';
 import { Icon } from 'leaflet';
-import { useRef } from 'react';
 import RocketIcon from 'assets/images/rocket.png';
 
 type Props = {
@@ -27,8 +26,6 @@ export default function Map({ mapData = [] }: Props) {
     iconUrl: RocketIcon,
     iconSize: [30, 30],
   });
-
-  const icon = useRef(MarkerIcon).current;
 
   return (
     <MapWrapper data-testid="map">

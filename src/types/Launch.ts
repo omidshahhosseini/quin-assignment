@@ -1,4 +1,4 @@
-import { AxiosResponse } from "axios";
+import { AxiosResponse } from 'axios';
 
 type UrlType = string;
 type DateType = `${number}-${number}-${number}T${number}:${number}:${number}Z`;
@@ -61,7 +61,7 @@ type PadType = {
 type StatusType = {
   id: 3;
   name: string;
-  abbrev: "Success" | "Failed";
+  abbrev: 'Success' | 'Failed';
   description: string;
 };
 
@@ -80,8 +80,8 @@ type LaunchType = {
     window_end: DateType;
     window_start: DateType;
     probability: null;
-    holdreason: "";
-    failreason: "";
+    holdreason: '';
+    failreason: '';
     hashtag: null;
     launch_service_provider: LaunchServiceProviderType;
     rocket: RocketType;

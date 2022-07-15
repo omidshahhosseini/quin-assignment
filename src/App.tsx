@@ -1,5 +1,5 @@
-import HomePage from "pages/home";
-import { Wrapper } from "styled";
+import HomePage from 'pages/home';
+import { Wrapper } from 'styled';
 
 function App() {
   return (

@@ -48,7 +48,7 @@ function HomePage() {
     const { value } = e.target;
 
     if (!value) {
-      const newMapData = resetToShowAllLaunches;
+      const newMapData = resetToShowAllLaunches();
       setMapData(newMapData);
     }
 
