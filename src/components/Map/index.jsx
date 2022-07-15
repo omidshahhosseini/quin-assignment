@@ -3,8 +3,10 @@ import { TileLayer } from 'react-leaflet/TileLayer';
 import { Marker, Popup } from 'react-leaflet';
 import styled from 'styled-components';
 
-export function Map({ positions = [] }) {
+export function Map({ mapData = [] }) {
   const position = [28.246017, 102.026556];
+
+  console.log(mapData);
 
   return (
     <MapWrapper>
@@ -13,11 +15,9 @@ export function Map({ positions = [] }) {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {positions.map((pos, i) => (
-          <Marker key={i} position={pos}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
+        {mapData.map((data, i) => (
+          <Marker key={i} position={data.position}>
+            <Popup>{data.popup}</Popup>
           </Marker>
         ))}
       </MapContainer>

@@ -6,17 +6,27 @@ import { Map } from 'components/Map';
 function App() {
   const { data, isLoading } = useGetRandomGif();
   console.log(data);
-  const positions = data?.data?.results?.map(({ pad }: any) => [
-    +pad.latitude,
-    +pad.longitude,
-  ]);
+  const positions = data?.data?.results?.map(
+    ({ pad, name, window_start, launch_service_provider }) => ({
+      position: [+pad.latitude, +pad.longitude],
+      popup: (
+        <>
+          <div>Name: {name}</div>
+          <div>Name of the launch pad: {pad.name}</div>
+          <div>Time of launch: {window_start}</div>
+          <div>Agency: {launch_service_provider.name}</div>
+        </>
+      ),
+    })
+  );
 
+  console.log('AA', positions);
   return (
     <div className="App">
       <Wrapper>
         <Ineer>
           <Container>
-            <Map positions={positions} />
+            <Map mapData={positions} />
             {/* {isLoading ? (
               <h1>Loading...</h1>
             ) : (
