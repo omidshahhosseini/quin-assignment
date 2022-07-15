@@ -4,6 +4,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import FontStyles from 'assets/styles/fonts';
 import NormalizeStyles from 'assets/styles/normalize';
+import { QueryClientProvider } from 'react-query';
+import { queryClient } from 'services/query-client';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,8 +14,9 @@ root.render(
   <React.StrictMode>
     <FontStyles />
     <NormalizeStyles />
-
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <App />
+    </QueryClientProvider>
   </React.StrictMode>
 );
 
