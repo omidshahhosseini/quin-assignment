@@ -1,7 +1,12 @@
-import React from "react";
+import HomePage from 'pages/home';
+import { Wrapper } from 'styled';
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <Wrapper>
+      <HomePage />
+    </Wrapper>
+  );
 }
 
 export default App;
