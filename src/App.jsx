@@ -4,7 +4,7 @@ import { useGetRandomGif } from 'services/apis/launch';
 import { Map } from 'components/Map';
 
 function App() {
-  const { data, isLoading } = useGetRandomGif();
+  const { data, isLoading, isError } = useGetRandomGif();
   console.log(data);
   const positions = data?.data?.results?.map(
     ({ pad, name, window_start, launch_service_provider }) => ({
@@ -20,7 +20,8 @@ function App() {
     })
   );
 
-  console.log('AA', positions);
+  if (isError) return <h2>Error in getting data from the API</h2>;
+
   return (
     <div className="App">
       <Wrapper>
