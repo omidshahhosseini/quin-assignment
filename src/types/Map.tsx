@@ -6,6 +6,7 @@ type MapItems = Array<{
   popup: ReactElement;
   agency: string;
   enabled: boolean;
+  wasSuccessful: boolean;
 }>;
 
 export type { MapItems };

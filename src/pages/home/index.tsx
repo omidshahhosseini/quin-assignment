@@ -20,6 +20,7 @@ function HomePage() {
       popup: <LaunchStationPopup launchInfo={info} />,
       agency: info.launch_service_provider.name,
       enabled: true,
+      wasSuccessful: info.status.abbrev === 'Success' ? true : false,
     }));
 
     setMapData(positions);
@@ -46,7 +47,13 @@ function HomePage() {
 
   const onFilterSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const { value } = e.target;
-
+    if (value === terms.SUCCESSFUL) {
+      const newMapData = mapData.map((item) => {
+        item.enabled = item.wasSuccessful;
+        return item;
+      });
+      setMapData(newMapData);
+    }
     if (!value) {
       const newMapData = resetToShowAllLaunches();
       setMapData(newMapData);
@@ -60,7 +67,7 @@ function HomePage() {
   return (
     <>
       <Select
-        options={[terms.AGENCY]}
+        options={[terms.AGENCY, terms.SUCCESSFUL]}
         title={terms.FILTER_BY + ': '}
         onChange={onFilterSelectChange}
       />
