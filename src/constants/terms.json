@@ -1,0 +1,9 @@
+{
+  "ERROR_ON_FETCH_DATA": "An Error occured in fetching data from server",
+  "AGENCY": "Agency",
+  "FILTER_BY": "Filter By",
+  "NAME": "Name",
+  "NAME_OF_LAUNCH_PAD": "Name of launch pad",
+  "TIME_OF_LAUNCH": "Time of launch",
+  "CHOOSE": "Choose"
+}

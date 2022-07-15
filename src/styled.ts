@@ -1,18 +1,12 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.div`
-  max-width: 1200px;
+  max-width: 980px;
   margin: 0 auto;
 `;
 
-const Ineer = styled.div`
+const Inner = styled.div`
   padding: 25px;
-`;
-
-const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
 `;
 
 const LaunchItem = styled.div`
@@ -21,4 +15,4 @@ const LaunchItem = styled.div`
   box-shadow: 0 0px 4px #c4c4c4;
 `;
 
-export { Wrapper, Ineer, Container, LaunchItem };
+export { Wrapper, Inner, LaunchItem };

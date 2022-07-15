@@ -21,6 +21,7 @@
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/ban-ts-comment": "off",
     "no-undef": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "no-unsafe-optional-chaining": "off"
   }
 }
